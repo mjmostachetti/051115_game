@@ -83,7 +83,8 @@
       "north": null,
       "east": null,
       "south": "H",
-      "west": null
+      "west": null,
+      "treasure": true
     }
   ]
 }
