@@ -8,41 +8,45 @@ var game = draw(map);
 var rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout
-})
+});
 
 var currentRoom = map.rooms[0];
 
-console.log("You are in room " + currentRoom.name);
-
 function whatsAroundYou(currentRoom){
 	var numMoves;
-	var directions = []
+	var directions = [];
 	var compass = ['north','south','east','west']
 		compass.forEach(function (way){
 			if(null !== currentRoom[way]){
-				directions.push(way)
-				numMoves++
+				directions.push(way);
+				numMoves++;
 			}
-	})
+		});
 	console.log("You can move " + directions.toString() + '.')
-}			
+}	
 
 function move(move){
 	for(var x = 0; x < map.rooms.length; x++){
 		if(map.rooms[x].name === currentRoom[move]){
 			currentRoom = map.rooms[x]
-			break
+			console.log("You are in now in room " + currentRoom.name + ".")
+			break;
 		}
 	}
 }
 
-while(currentRoom.treasure === false){
-	console.log("You are in room " + currentRoom.room)
+function play(){
+		whatsAroundYou(currentRoom)
+		if(currentRoom.treasure !== false){
+			console.log("You've found the treasure!")
+			rl.close()
+		} else{
+			rl.question("You are in room " + currentRoom.name + "\n" +
+			"What direction do you want to go?", function(direction){
+				console.log("You are moving " + direction + ".");
+				move(direction)
+				play()
+			})
+		}	
 }
-
-whatsAroundYou(currentRoom);
-console.log(currentRoom.name)
-move("east");
-console.log(currentRoom.name)
-//move('south')
-rl.close();
+play();
