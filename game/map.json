@@ -6,7 +6,8 @@
       "east": "B",
       "south": null,
       "west": null,
-      "treasure": false
+      "treasure": false,
+      "visited": true
     },
     {
       "name": "B",
@@ -15,7 +16,8 @@
       "south": null,
       "west": "A",
       "entrance": "south",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "C",
@@ -23,7 +25,8 @@
       "east": null,
       "south": null,
       "west": "B",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "D",
@@ -31,7 +34,8 @@
       "east": null,
       "south": "A",
       "west": null,
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "E",
@@ -39,7 +43,8 @@
       "east": "F",
       "south": "B",
       "west": null,
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "F",
@@ -47,7 +52,8 @@
       "east": null,
       "south": null,
       "west": "E",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "G",
@@ -55,7 +61,8 @@
       "east": null,
       "south": "D",
       "west": null,
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "H",
@@ -63,7 +70,8 @@
       "east": "I",
       "south": "G",
       "west": null,
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "I",
@@ -71,7 +79,8 @@
       "east": "J",
       "south": null,
       "west": "H",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "J",
@@ -79,7 +88,8 @@
       "east": "K",
       "south": null,
       "west": "I",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "K",
@@ -87,7 +97,8 @@
       "east": null,
       "south": null,
       "west": "J",
-      "treasure": false
+      "treasure": false,
+      "visited": false
     },
     {
       "name": "W",
@@ -95,7 +106,8 @@
       "east": null,
       "south": "H",
       "west": null,
-      "treasure": true
+      "treasure": true,
+      "visited": false
     }
   ]
 }
